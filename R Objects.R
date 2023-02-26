@@ -1,0 +1,10 @@
+data("iris")
+head(iris)
+flower <- setClass("flower", representation(sepal_length = "numeric", sepal_width = "numeric", petal_length = "numeric", petal_width = "numeric", species = "character"))
+f3 <- list(sepal_length = "numeric", sepal_width = 3.5, petal_length = 1.4, petal_width = .2, species = "setosa")
+class(f3) <- "flower"
+f4 <- new("flower",sepal_length = 5.1, sepal_width = 3.5, petal_length = 1.4, petal_width = .2, species = "setosa")
+print(f3)
+isS4(f3)
+print(f4)
+isS4(f4)
